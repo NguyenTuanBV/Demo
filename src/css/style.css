@@ -919,7 +919,7 @@ img {
     aspect-ratio: 1/1;
 }
 
-.swiper.swiper--thumbs {
+.swiper.product-info__swiper--thumbs {
     max-width: 345px;
     margin: 0;
     padding-top: 29px;
@@ -995,6 +995,7 @@ img {
     padding: 16px 14px;
     border: 1px solid #E3E5E8;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 .product-info__detail-type {
@@ -1013,6 +1014,7 @@ img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .product-info__detail-item:nth-child(1){

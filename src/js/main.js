@@ -30,13 +30,13 @@ $(document).ready(function(){
 })
 
 
-const swiperThumbs = new Swiper('.swiper--thumbs', {
+const swiperThumbs = new Swiper('.product-info__swiper--thumbs', {
     speed: 400,
     slidesPerView: 3,
     spaceBetween: 12,
     loop: false,
 });
-const swiper = new Swiper('.swiper--large', {
+const swiper = new Swiper('.product-info__swiper-large', {
     speed: 400,
     slidesPerView: 1,
     spaceBetween: 12,
