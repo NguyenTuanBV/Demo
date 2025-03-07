@@ -1069,6 +1069,7 @@ footer {
     left: 0;
     bottom: 95%;
     opacity: 0;
+    visibility: hidden;
     background-color: #fff;
     border-radius: 8px;
     padding: 8px 8px 4px 8px;
@@ -1099,6 +1100,7 @@ footer {
 .footer-bottom__payment-convert:hover .footer-bottom__payment-main{
     bottom: 100%;
     opacity: 1;
+    visibility: visible;
     transition: all .4s;
 }
 
