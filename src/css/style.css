@@ -421,7 +421,7 @@ img {
     letter-spacing: -3px;
 }
 
-.st-image-bottom {
+.st-image__bottom {
     max-width: 511px;
     display: flex;
     gap: 29px;
@@ -1416,7 +1416,7 @@ footer {
         height: 100vh;
     }
 
-    .st-image-bottom {
+    .st-image__bottom {
         flex-direction: column;
         gap: 10px;
         padding: 13px 15px 19px 20px;
