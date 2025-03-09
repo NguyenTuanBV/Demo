@@ -4,7 +4,7 @@ $(document).ready(function(){
     margin: 14,
     dots: false,
     nav: true,
-    navText: ["<img src='../src/image/arrow-left.png'/>","<img src='../src/image/arrow-right.png'/>"],
+    navText: ["<img src='./src/image/arrow-left.png'/>","<img src='./src/image/arrow-right.png'/>"],
     rewind: true,
     // autoplay: true,
     // autoplayTimeout: 4000,
@@ -30,13 +30,13 @@ $(document).ready(function(){
 })
 
 
-const swiperThumbs = new Swiper('.product-info__swiper--thumbs', {
+const swiperThumbs = new Swiper('.product-info__slide-thumbs', {
     speed: 400,
     slidesPerView: 3,
     spaceBetween: 12,
     loop: false,
 });
-const swiper = new Swiper('.product-info__swiper-large', {
+const swiper = new Swiper('.product-info__slide-large', {
     speed: 400,
     slidesPerView: 1,
     spaceBetween: 12,
