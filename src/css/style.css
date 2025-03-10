@@ -2041,6 +2041,16 @@ footer {
 }
 
 
+@media (min-width: 1200px) {
+    .product-info__slide {
+        max-width: 50%;
+    }
+
+    .product-info__detail-action .button--buy {
+        flex: 1;
+    }
+}
+
 @media only screen and (max-width: 1440px){
     .banner__title {
         font-size: 140px;
@@ -2063,7 +2073,6 @@ footer {
     .product-info__detail {
         padding: 30px 20px;
     }
-
 
     .product-info__detail-change {
         width: calc(100% - 50px);
