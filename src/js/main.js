@@ -4,7 +4,7 @@ $(document).ready(function(){
     margin: 14,
     dots: false,
     nav: true,
-    navText: ["<img src='./src/image/arrow-left.png'/>","<img src='./src/image/arrow-right.png'/>"],
+    navText: ["<img src='./src/image/Arrow-left.png'/>","<img src='./src/image/Arrow-right.png'/>"],
     rewind: true,
     // autoplay: true,
     // autoplayTimeout: 4000,
