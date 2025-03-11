@@ -673,7 +673,6 @@ span {
     background-color: #66616165;
     opacity: 0;
     transition: all .3s;
-    z-index: 2;
 }
 .card__title-8 {
     position: absolute;
@@ -747,6 +746,7 @@ span {
     border-bottom: 1px solid #fff;
     transform: scaleX(0);
     transition: all .3s;
+    z-index: 2;
 }
 .card__rel--9::after {
     content: "";
@@ -759,6 +759,7 @@ span {
     border-right: 1px solid #fff;
     transform: scaleY(0);
     transition: all .3s;
+    z-index: 2;
 }
 .card--9:hover .card__rel--9::before,
 .card--9:hover .card__rel--9::after {
