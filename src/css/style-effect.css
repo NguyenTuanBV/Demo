@@ -1315,20 +1315,29 @@ span {
 }
 
 .card__icon-list img {
+    position: absolute;
     width: 40px;
+    min-height: 40px;
     filter: invert(1);
     opacity: 0;
     transition: all .3s;
 }
 
+.card__icon-list:nth-child(1) img {
+    top: 5px;
+    left: 5px;
+}
 .card__icon-list:nth-child(2) img {
-    transform: translateX(100%);
+    top: 5px;
+    right: 5px;
 }
 .card__icon-list:nth-child(3) img {
-    transform: translateY(100%);
+    left: 5px;
+    bottom: 5px;
 }   
 .card__icon-list:nth-child(4) img {
-    transform: translate(100%, 100%);
+    right: 5px;
+    bottom: 5px;
 }
 
 .card__rel--17:hover .card__icon-list img {
@@ -1337,22 +1346,26 @@ span {
 }
 
 .card__rel--17:hover .card__icon-list:nth-child(1) img{
-    transform: translate(100%, 100%);
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
     transition: all .3s;
 }
 
 .card__rel--17:hover .card__icon-list:nth-child(2) img{
-    transform: translate(0, 100%);
+    top: calc(100% - 50px);
+    right: calc(100% - 50px);
     transition: all .3s;
 }
 
 .card__rel--17:hover .card__icon-list:nth-child(3) img{
-    transform: translate(100%, -00%);
+    left: calc(100% - 50px);
+    bottom: calc(100% - 50px);
     transition: all .3s;
 }
 
 .card__rel--17:hover .card__icon-list:nth-child(4) img{
-    transform: translate(0, 0);
+    right: calc(100% - 50px);
+    bottom: calc(100% - 50px);
     transition: all .3s;
 }
 
