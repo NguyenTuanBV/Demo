@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/xo-webcomponents.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -48,7 +49,94 @@
             <div class="container">
                 <div class="product-info__grid">
                     <div class="product-info__slide">
-                        <div class="swiper product-info__slide-large">
+
+
+                        <xo-carousel xo-active-index="0"
+                            xo-rewind
+                            xo-per-view="1"
+                            xo-per-move="1" 
+                        >
+                            <xo-carousel-inner>
+                                <xo-carousel-list>
+                                    <xo-carousel-slide>
+                                        <div class="carousel-item">
+                                            <img src="./src/image/product-1.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide>
+                                        <div class="carousel-item">
+                                            <img src="./src/image/product-2.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide>
+                                        <div class="carousel-item">
+                                            <img src="./src/image/product-3.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide>
+                                        <div class="carousel-item">
+                                            <img src="./src/image/product-4.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide>
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-3.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                </xo-carousel-list>
+                            </xo-carousel-inner>
+                            <xo-carousel-thumbnail style="margin-top: 20px;"
+                                xo-rewind
+                                xo-per-view="4"
+                                xo-per-move="1" 
+                                xo-breakpoints="{
+                                    400: {
+                                        perView: 1,
+                                        perMove: 1,
+                                    },
+                                    1000: {
+                                        perView: 2,
+                                        perMove: 2,
+                                    },
+                                    1200: {
+                                        perView: 3,
+                                        perMove: 3,
+                                    }
+                                }"
+                            >
+                              <xo-carousel-inner>
+                                <xo-carousel-list>
+                                    <xo-carousel-slide class="product-info__nav">
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-1.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide class="product-info__nav">
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-2.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide class="product-info__nav">
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-3.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide class="product-info__nav">
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-4.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                    <xo-carousel-slide class="product-info__nav">
+                                        <div class="carousel-item-thumb">
+                                            <img src="./src/image/product-3.png" alt="">
+                                        </div>
+                                    </xo-carousel-slide>
+                                </xo-carousel-list>
+                              </xo-carousel-inner>
+                            </xo-carousel-thumbnail>
+                        </xo-carousel>
+
+                        <!-- <div class="swiper product-info__slide-large">
                             <div class="swiper-wrapper">
                                 <div class="swiper__center swiper-slide">
                                     <img src="./src/image/img-detail.png" alt="">
@@ -63,11 +151,6 @@
                                     <img src="./src/image/img-detail.png" alt="">
                                 </div>
                             </div>
-                            <!-- <div class="swiper-pagination"></div>
-                            <div class="btn">
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div> -->
                         </div>
                         <div class="swiper product-info__slide-thumbs">
                             <div class="swiper-wrapper swiper__main">
@@ -84,7 +167,7 @@
                                     <img src="./src/image/product-3.png" alt="">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="product-info__detail">
                         <div class="product-info__detail-content">
@@ -145,6 +228,31 @@
                             </div>
                         </div>
                         <div class="product-info__detail-feature">
+
+                            <xo-collapse-provider xo-duration="300">
+                                <xo-collapse-trigger xo-active>
+                                  <div class="collapse-header">Collapse 1</div>
+                                </xo-collapse-trigger>
+                                <xo-collapse xo-active>
+                                  <div class="collapse-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, id! Consequatur amet accusamus distinctio provident ducimus ipsum quo aperiam laborum labore illo.</div>
+                                </xo-collapse>
+                      
+                                <xo-collapse-trigger>
+                                  <div class="collapse-header">Collapse 2</div>
+                                </xo-collapse-trigger>
+                                <xo-collapse>
+                                  <div class="collapse-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, id! Consequatur amet accusamus distinctio provident ducimus ipsum quo aperiam laborum labore illo.</div>
+                                </xo-collapse>
+                      
+                                <xo-collapse-trigger>
+                                  <div class="collapse-header">Collapse 3</div>
+                                </xo-collapse-trigger>
+                                <xo-collapse>
+                                  <div class="collapse-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, id! Consequatur amet accusamus distinctio provident ducimus ipsum quo aperiam laborum labore illo.</div>
+                                </xo-collapse>
+                              </xo-collapse-provider>
+                      
+
                             <div class="product-info__detail-collapsible">
                                 <div class="product-info__detail-icons">
                                     <h6>Main features</h6>
@@ -720,6 +828,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/carousel/owl.carousel.min.js"></script>
+    <script src="./src/js/xo-webcomponents.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
 </html>
