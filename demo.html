@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Name</legend>
+            <label>
+                <span>Name</span>
+                <input type="text" id="">
+            </label>
+           
+            <br>
+            <label class="field">
+                <input type="checkbox" name="" id="">
+                <span></span>
+            </label>
+            
+        </fieldset>
+        
+    </form>
+
+    <style>
+        .field input:checked ~ span {
+            color: yellow;
+            background-color: #000;
+        }
+
+        .field span {
+            display: inline-block;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        .field input {
+            display: none;
+        }
+    </style>
+</body>
+</html>

@@ -59,7 +59,7 @@ body {
 }
 @media (min-width: 1900px) {
     .container {
-        max-width: 1592px;
+        max-width: 1620px;
     }
 
     .services__item {
