@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/xo-webcomponents.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,32 +17,45 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__nav">
-                <div class="header__logo">
-                    <a href=""><img src="./src/image/Logo.png" alt=""></a>
-                </div>
-                <div class="header__menu">
-                    <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="">New & Featured</a></li>
-                        <li class="header__menu-item"><a href="">Collection</a></li>
-                        <li class="header__menu-item"><a href="">Customize</a></li>
-                        <li class="header__menu-item"><a href="">About us</a></li>
-                        <li class="header__menu-item"><a href="">Blog</a></li>
-                    </ul>
-
-                    <div class="header__icon">
-                        <ul class="header__icon-list">
-                            <li class="header__icon-item"><img src="./src/image/Search.svg" alt=""></li>
-                            <li class="header__icon-item"><img src="./src/image/User.svg" alt=""></li>
-                            <li class="header__icon-item header__icon-item--quantity">
-                                <img src="./src/image/Cart.svg" alt="">
-                                <span>22</span>
-                            </li>
-                        </ul>
+            <xo-sticky xo-direction="down" class="header__scroll">
+                <div class="header__nav">
+                    <div class="header__logo">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="160" height="28" viewBox="0 0 160 28" fill="none">
+                                <path d="M9.35276 22.1933C3.3621 22.1933 0 18.6971 0 12.3735V0.456026H4.4013V12.0391C4.4013 16.2649 6.08235 18.393 9.32219 18.393C12.5926 18.393 14.2737 16.2649 14.2737 12.0391V0.456026H18.7055V12.3735C18.7055 18.6971 15.3128 22.1933 9.35276 22.1933Z" fill="white"/>
+                                <path d="M37.0536 0.456026H41.4549V21.7372H35.3725L27.334 5.10749V21.7372H22.9327V0.456026H29.4124L37.0536 16.2345V0.456026Z" fill="white"/>
+                                <path d="M46.0949 21.7372V0.456026H50.4963V21.7372H46.0949Z" fill="white"/>
+                                <path d="M75.8617 11.0966C75.8617 18.241 70.3295 22.0109 64.5834 23.3485C68.2206 23.4701 71.3076 23.8654 74.0279 24.4126V28C69.1375 26.9967 62.9024 26.4191 56.9728 26.4191V22.8317C60.0599 22.7405 63.1774 22.3757 65.7754 21.4028C65.2864 21.4636 64.7668 21.494 64.2778 21.494C58.8984 21.494 54.1303 17.5418 54.1303 11.0054C54.1303 4.71227 58.5316 0 65.0113 0C71.3687 0 75.8617 4.59066 75.8617 11.0966ZM58.6844 11.0358C58.6844 15.4441 61.2824 18.3626 65.0113 18.3626C68.7402 18.3626 71.3076 15.4745 71.3076 11.0662C71.3076 6.71878 68.7708 3.70901 64.9807 3.70901C61.2213 3.70901 58.6844 6.68838 58.6844 11.0358Z" fill="white"/>
+                                <path d="M89.4897 22.1933C82.6738 22.1933 78.4865 17.2682 78.4865 11.0662C78.4865 4.62106 82.9489 0 89.3674 0C95.4498 0 99.6983 4.07383 98.7813 9.45494H94.2272C94.8385 5.95874 92.699 3.70901 89.4286 3.70901C85.5163 3.70901 83.0406 6.962 83.0406 11.0662C83.0406 15.3529 85.6691 18.4843 89.4897 18.4843C92.5462 18.4843 94.594 16.4777 95.0525 13.8328H99.7288C98.9953 18.9403 95.0219 22.1933 89.4897 22.1933Z" fill="white"/>
+                                <path d="M117.673 21.7372L116.053 17.481H106.517L104.897 21.7372H100.19L108.504 0.456026H113.853L122.197 21.7372H117.673ZM107.862 13.8936H114.708L111.285 4.83388L107.862 13.8936Z" fill="white"/>
+                                <path d="M132.106 22.1933C126.451 22.1933 122.875 19.2443 123.242 14.6232H127.674C127.521 17.1162 129.202 18.5755 132.197 18.5755C134.795 18.5755 136.354 17.4506 136.354 15.8089C136.354 11.0662 123.517 15.1097 123.517 6.74918C123.517 2.52334 126.818 0 131.922 0C137.485 0 140.847 3.00977 140.297 7.53963H135.865C136.232 5.04669 134.673 3.61781 131.83 3.61781C129.477 3.61781 127.979 4.65146 127.979 6.26276C127.979 11.0054 140.847 7.0836 140.847 15.3225C140.847 19.6091 137.424 22.1933 132.106 22.1933Z" fill="white"/>
+                                <path d="M148.936 18.1498H160V21.7372H144.534V0.456026H159.694V4.04343H148.936V8.7253H158.105V12.3127H148.936V18.1498Z" fill="white"/>
+                            </svg>
+                        </a>
                     </div>
-                    <div class="header__bar"><img src="./src/image/menu-bar.png" alt=""></div>
+                    <div class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item"><a href="">New & Featured</a></li>
+                            <li class="header__menu-item"><a href="">Collection</a></li>
+                            <li class="header__menu-item"><a href="">Customize</a></li>
+                            <li class="header__menu-item"><a href="">About us</a></li>
+                            <li class="header__menu-item"><a href="">Blog</a></li>
+                        </ul>
+    
+                        <div class="header__icon">
+                            <ul class="header__icon-list">
+                                <li class="header__icon-item"><img src="./src/image/Search.svg" alt=""></li>
+                                <li class="header__icon-item"><img src="./src/image/User.svg" alt=""></li>
+                                <li class="header__icon-item header__icon-item--quantity">
+                                    <img src="./src/image/Cart.svg" alt="">
+                                    <span>22</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__bar"><img src="./src/image/menu-bar.png" alt=""></div>
+                    </div>
                 </div>
-            </div>
+            </xo-sticky>
         </header>
         <section class="banner">
             <img src="./src/image/bg-shop.png" alt="">
@@ -53,13 +67,123 @@
         </section>
 
         <section class="category">
-            <div class="container">
+            <xo-container>
                 <div class="category__title">
                     <h6>Shop by Category</h6>
                     <div class="category__des">
                         <p>Protect your phone in style. From minimalist to drop-proof cases, we have your back</p>
                     </div>
                 </div>
+
+                <xo-carousel class="category-slide"
+                    xo-rewind
+                    xo-per-view="6",
+                    xo-per-move="1",
+                    xo-breakpoints="{
+                        0: {
+                            perView: 1,
+                            perMove: 1,
+                        },
+                        540: {
+                            perView: 2,
+                            perMove: 1,
+                        },
+                        768: {
+                            perView: 3,
+                            perMove: 1,
+                        },
+                        1300: {
+                            perView: 6,
+                            perMove: 1,
+                        },
+                    }"
+                >
+                    <xo-carousel-inner>
+                        <xo-carousel-list>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list category-slide__list--selected">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-2.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-1.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-3.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-4.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-5.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-6.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide class="category-slide__item">
+                                <a href="" class="category-slide__list">
+                                    <div class="category-slide__img">
+                                        <img src="./src/image/category-2.png" alt="">
+                                    </div>
+                                    <div class="category-slide__name">
+                                        <span>Case Samsung</span>
+                                    </div>
+                                </a>
+                            </xo-carousel-slide>
+                        </xo-carousel-list>
+                    </xo-carousel-inner>
+                    <div class="category-slide__nav">
+                        <xo-carousel-prev>
+                            <button><img src="./src/image/Arrow-left.png" alt=""></button>
+                        </xo-carousel-prev>
+                        <xo-carousel-next>
+                            <button><img src="./src/image/Arrow-right.png" alt=""></button>
+                        </xo-carousel-next>
+                    </div>
+                    <xo-carousel-pagination></xo-carousel-pagination>
+                    
+                </xo-carousel>
+
                 <div class="category-slide owl-carousel owl-theme">
                     <a href="" class="category-slide__list category-slide__list--selected">
                         <div class="category-slide__img">
@@ -118,7 +242,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </xo-container>
         </section>
         <section class="product-main">
             <div class="container">
@@ -133,112 +257,122 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col" style="--col-lg: 3; --col-md: 6; --col-xs: 6; --col-sm: 6">
-                        <a href="" class="product-card">
-                            <div class="product-card__icon">
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="./src/image/product-1.png" alt="">
-                                <div class="product-card__img-action">
-                                    <img src="./src/image/product-2.png" alt="">
+                <xo-grid>
+                    <div style="--xs: 6; --sm: 6; --lg: 3">
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <a href="" class="product-card">
+                                <div class="product-card__icon">
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                            </div>
-                            
-                            <div class="product-card__description">
-                                <h6>Hills</h6>
-                                <p class="product-card__description-price">$76</p>
-                                <ul class="product-card__description-option">
-                                    <li class="product-card__description-item product-card__description-item--active"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                </ul>
-                            </div>
-                        </a>
+                                <div class="product-card__img">
+                                    <img src="./src/image/product-1.png" alt="">
+                                    <div class="product-card__img-action">
+                                        <img src="./src/image/product-2.png" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card__description">
+                                    <h6>Hills</h6>
+                                    <p class="product-card__description-price">$76</p>
+                                    <ul class="product-card__description-option">
+                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </xo-animate>
+                        
                     </div>
-                    <div class="col" style="--col-lg: 3; --col-md: 6; --col-xs: 6; --col-sm: 6">
-                        <a href="" class="product-card">
-                            <div class="product-card__icon">
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="./src/image/product-2.png" alt="">
-                                <div class="product-card__img-action">
+                    <div style="--xs: 6; --sm: 6; --lg: 3">
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <a href="" class="product-card">
+                                <div class="product-card__icon">
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                </div>
+                                <div class="product-card__img">
+                                    <img src="./src/image/product-2.png" alt="">
+                                    <div class="product-card__img-action">
+                                        <img src="./src/image/product-3.png" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card__description">
+                                    <h6>Hills</h6>
+                                    <p class="product-card__description-price">$76</p>
+                                    <ul class="product-card__description-option">
+                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </xo-animate>
+                    </div>
+                    <div style="--xs: 6; --sm: 6; --lg: 3">
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <a href="" class="product-card">
+                                <div class="product-card__icon">
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                </div>
+                                <div class="product-card__img">
                                     <img src="./src/image/product-3.png" alt="">
+                                    <div class="product-card__img-action">
+                                        <img src="./src/image/product-4.png" alt="">
+                                    </div>
                                 </div>
-                            </div>
-                            
-                            <div class="product-card__description">
-                                <h6>Hills</h6>
-                                <p class="product-card__description-price">$76</p>
-                                <ul class="product-card__description-option">
-                                    <li class="product-card__description-item product-card__description-item--active"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col" style="--col-lg: 3; --col-md: 6; --col-xs: 6; --col-sm: 6">
-                        <a href="" class="product-card">
-                            <div class="product-card__icon">
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="./src/image/product-3.png" alt="">
-                                <div class="product-card__img-action">
-                                    <img src="./src/image/product-4.png" alt="">
+                                
+                                <div class="product-card__description">
+                                    <h6>Hills</h6>
+                                    <p class="product-card__description-price">$76</p>
+                                    <ul class="product-card__description-option">
+                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                    </ul>
                                 </div>
-                            </div>
-                            
-                            <div class="product-card__description">
-                                <h6>Hills</h6>
-                                <p class="product-card__description-price">$76</p>
-                                <ul class="product-card__description-option">
-                                    <li class="product-card__description-item product-card__description-item--active"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                </ul>
-                            </div>
-                        </a>
+                            </a>
+                        </xo-animate>
                     </div>
-                    <div class="col" style="--col-lg: 3; --col-md: 6; --col-xs: 6; --col-sm: 6">
-                        <a href="" class="product-card">
-                            <div class="product-card__icon">
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                            </div>
-                            <div class="product-card__img">
-                                <img src="./src/image/product-1.png" alt="">
-                                <div class="product-card__img-action">
-                                    <img src="./src/image/product-2.png" alt="">
+                    <div style="--xs: 6; --sm: 6; --lg: 3">
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <a href="" class="product-card">
+                                <div class="product-card__icon">
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                            </div>
-                            
-                            <div class="product-card__description">
-                                <h6>Hills</h6>
-                                <p class="product-card__description-price">$76</p>
-                                <ul class="product-card__description-option">
-                                    <li class="product-card__description-item product-card__description-item--active"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                    <li class="product-card__description-item"></li>
-                                </ul>
-                            </div>
-                        </a>
+                                <div class="product-card__img">
+                                    <img src="./src/image/product-1.png" alt="">
+                                    <div class="product-card__img-action">
+                                        <img src="./src/image/product-2.png" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="product-card__description">
+                                    <h6>Hills</h6>
+                                    <p class="product-card__description-price">$76</p>
+                                    <ul class="product-card__description-option">
+                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </xo-animate>
+                        
                     </div>
-                </div>
+                </xo-grid>
                 <div class="product-main__pagination">
                     <button type="button" class="product-main__pagination-button product-main__pagination-button--prev">
                         <img src="./src/image/Arrow-left.png" alt="">
@@ -256,88 +390,99 @@
             </div>
         </section>
         <section class="services">
-            <div class="container">
+            <xo-container>
                 <div class="row">
                     <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
-                       <div class="services__item">
-                            <div class="services__item-img">
-                                <img src="./src/image/services-1.png" alt="">
-                            </div>
-                            <div class="services__item-des">
-                                <h4>Buy Now Pay Later</h4>
-                                <div>
-                                    <p>Pay in installments with 0% interest and no extra charges through Shop Pay</p>
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <div class="services__item">
+                                <div class="services__item-img">
+                                    <img src="./src/image/services-1.png" alt="">
                                 </div>
-                            </div>
-                       </div>
+                                <div class="services__item-des">
+                                    <h4>Buy Now Pay Later</h4>
+                                    <div>
+                                        <p>Pay in installments with 0% interest and no extra charges through Shop Pay</p>
+                                    </div>
+                                </div>
+                           </div>
+                        </xo-animate>
                     </div>
                     <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
-                       <div class="services__item">
-                            <div class="services__item-img">
-                                <img src="./src/image/services-2.png" alt="">
-                            </div>
-                            <div class="services__item-des">
-                                <h4>Easy Returns</h4>
-                                <div>
-                                    <p>Your exchange ships out as soon as you email us.</p>
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <div class="services__item">
+                                <div class="services__item-img">
+                                    <img src="./src/image/services-2.png" alt="">
                                 </div>
-                            </div>
-                       </div>
+                                <div class="services__item-des">
+                                    <h4>Easy Returns</h4>
+                                    <div>
+                                        <p>Your exchange ships out as soon as you email us.</p>
+                                    </div>
+                                </div>
+                           </div>
+                        </xo-animate>
                     </div>
                     <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
-                       <div class="services__item">
-                            <div class="services__item-img">
-                                <img src="./src/image/services-3.png" alt="">
-                            </div>
-                            <div class="services__item-des">
-                                <h4>Wordwide shipping</h4>
-                                <div>
-                                    <p>Receive your order an estimated 3-5 days after shipment</p>
+                        <xo-animate xo-cascade xo-type="fade-up">
+                            <div class="services__item">
+                                <div class="services__item-img">
+                                    <img src="./src/image/services-3.png" alt="">
                                 </div>
-                            </div>
-                            
-                       </div>
+                                <div class="services__item-des">
+                                    <h4>Wordwide shipping</h4>
+                                    <div>
+                                        <p>Receive your order an estimated 3-5 days after shipment</p>
+                                    </div>
+                                </div>
+                           </div>
+                        </xo-animate>
                     </div>
                 </div>
-            </div>
+            </xo-container>
         </section>
         <footer>
             <div class="footer-main">
                 <div class="container-f">
                     <div class="footer-main__info">
                         <div class="footer-main__logo">
-                            <img src="./src/image/Logo-footer.png" alt="">
-                            <p>
-                                This means that once you use different template designs for actual testimonial website widgets, you can make images from
-                                them and post
-                            </p>
-                            <ul class="footer-main__social">
-                                <li class="footer-main__social-item"><a href=""><img src="./src/image/Facebook.png" alt=""></a></li>
-                                <li class="footer-main__social-item"><a href=""><img src="./src/image/Pinterest.png" alt=""></a></li>
-                                <li class="footer-main__social-item"><a href=""><img src="./src/image/tiktok.png" alt=""></a></li>
-                                <li class="footer-main__social-item"><a href=""><img src="./src/image/Instagram.png" alt=""></a></li>
-                            </ul>
+                            <xo-animate xo-cascade xo-type="fade-up">
+                                <img src="./src/image/Logo-footer.png" alt="">
+                                <p>
+                                    This means that once you use different template designs for actual testimonial website widgets, you can make images from
+                                    them and post
+                                </p>
+                                <ul class="footer-main__social">
+                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Facebook.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Pinterest.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/tiktok.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Instagram.png" alt=""></a></li>
+                                </ul>
+                            </xo-animate>
                         </div>
                         <div class="footer-main__link">
                             <div class="footer-main__link-item">
-                                <p>HOME</p>
-                                <ul class="footer-main__list">
-                                    <li class="footer-main__list-item"><a href="">Shop</a></li>
-                                    <li class="footer-main__list-item"><a href="">Collection</a></li>
-                                    <li class="footer-main__list-item"><a href="">About us</a></li>
-                                    <li class="footer-main__list-item"><a href="">Blogs</a></li>
-                                    <li class="footer-main__list-item"><a href="">Contact</a></li>
-                                </ul>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <p>HOME</p>
+                                    <ul class="footer-main__list">
+                                        <li class="footer-main__list-item"><a href="">Shop</a></li>
+                                        <li class="footer-main__list-item"><a href="">Collection</a></li>
+                                        <li class="footer-main__list-item"><a href="">About us</a></li>
+                                        <li class="footer-main__list-item"><a href="">Blogs</a></li>
+                                        <li class="footer-main__list-item"><a href="">Contact</a></li>
+                                    </ul>
+                                </xo-animate>
                             </div>
                             <div class="footer-main__link-item">
-                                <p>COLLECTION</p>
-                                <ul class="footer-main__list">
-                                    <li class="footer-main__list-item"><a href="">Sprring Summer</a></li>
-                                    <li class="footer-main__list-item"><a href="">Summer Nautica</a></li>
-                                    <li class="footer-main__list-item"><a href="">Ocean Ocean 2023</a></li>
-                                    <li class="footer-main__list-item"><a href="">Blogs</a></li>
-                                    <li class="footer-main__list-item"><a href="">Contact</a></li>
-                                </ul>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <p>COLLECTION</p>
+                                    <ul class="footer-main__list">
+                                        <li class="footer-main__list-item"><a href="">Sprring Summer</a></li>
+                                        <li class="footer-main__list-item"><a href="">Summer Nautica</a></li>
+                                        <li class="footer-main__list-item"><a href="">Ocean Ocean 2023</a></li>
+                                        <li class="footer-main__list-item"><a href="">Blogs</a></li>
+                                        <li class="footer-main__list-item"><a href="">Contact</a></li>
+                                    </ul>
+                                </xo-animate>
                             </div>
                         </div>
                     </div>
@@ -345,38 +490,43 @@
             </div>
             
             <div class="footer-newsletter">
-                <form action="" class="footer-newsletter__form">
-                    <input type="text" placeholder="Enter your email...">
-                    <button type="submit"><img src="./src/image/Arrow-button.png" alt=""></button>
-                </form>
+                <xo-animate xo-cascade xo-type="fade-up">
+                    <form action="" class="footer-newsletter__form">
+                        <input type="text" placeholder="Enter your email...">
+                        <button type="submit"><img src="./src/image/Arrow-button.png" alt=""></button>
+                    </form>
+                </xo-animate>
             </div>
 
             <div class="footer-bottom">
-                <div class="footer-bottom__content">
-                    <div class="footer-bottom__link">
-                        <ul class="footer-bottom__list">
-                            <li class="footer-bottom__list-item"><a href="">Term</a></li>
-                            <li class="footer-bottom__list-item"><a href="">Policy Privicy</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-bottom__payment">
-                        <div class="footer-bottom__payment-img">
-                            <img src="./src/image/shop pay.png" alt="">
-                            <img src="./src/image/visa.png" alt="">
-                            <img src="./src/image/visa.png" alt="">
-                            <img src="./src/image/apple pay.png" alt="">
-                            <img src="./src/image/google pay.png" alt="">
-                            <img src="./src/image/amex.png" alt="">
+                <xo-animate xo-cascade xo-type="fade-up">
+                    <div class="footer-bottom__content">
+                        <div class="footer-bottom__link">
+                            <ul class="footer-bottom__list">
+                                <li class="footer-bottom__list-item"><a href="">Term</a></li>
+                                <li class="footer-bottom__list-item"><a href="">Policy Privicy</a></li>
+                            </ul>
                         </div>
-                        <div class="footer-bottom__payment-convert">
-                            <p>United States (USD$) <img src="./src/image/Frame.png" alt=""></p>
-                            <div class="footer-bottom__payment-main footer-bottom__payment-main--list">
-                                <span>VietNamese (VND)</span>
-                                <span>VietNamese (VND)</span>
+                        <div class="footer-bottom__payment">
+                            <div class="footer-bottom__payment-img">
+                                <img src="./src/image/shop pay.png" alt="">
+                                <img src="./src/image/visa.png" alt="">
+                                <img src="./src/image/visa.png" alt="">
+                                <img src="./src/image/apple pay.png" alt="">
+                                <img src="./src/image/google pay.png" alt="">
+                                <img src="./src/image/amex.png" alt="">
+                            </div>
+                            <div class="footer-bottom__payment-convert">
+                                <p>United States (USD$) <img src="./src/image/Frame.png" alt=""></p>
+                                <div class="footer-bottom__payment-main footer-bottom__payment-main--list">
+                                    <span>VietNamese (VND)</span>
+                                    <span>VietNamese (VND)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </xo-animate>
+                
             </div>
         </footer>
     </div>
@@ -385,6 +535,7 @@
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/carousel/owl.carousel.min.js"></script>
+    <script src="./src/js/xo-webcomponents.js"></script>
     <script src="./src/js/main.js"></script>
     
 </body>

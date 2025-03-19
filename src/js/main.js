@@ -30,29 +30,29 @@
 // })
 
 
-const swiperThumbs = new Swiper('.product-info__slide-thumbs', {
-    speed: 400,
-    slidesPerView: 3,
-    spaceBetween: 12,
-    loop: false,
-});
-const swiper = new Swiper('.product-info__slide-large', {
-    speed: 400,
-    slidesPerView: 1,
-    spaceBetween: 12,
-    loop: false,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-        swiper: swiperThumbs
-    }
-});
+// const swiperThumbs = new Swiper('.product-info__slide-thumbs', {
+//     speed: 400,
+//     slidesPerView: 3,
+//     spaceBetween: 12,
+//     loop: false,
+// });
+// const swiper = new Swiper('.product-info__slide-large', {
+//     speed: 400,
+//     slidesPerView: 1,
+//     spaceBetween: 12,
+//     loop: false,
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+//     thumbs: {
+//         swiper: swiperThumbs
+//     }
+// });
 
 
 // $('.product-info__detail-icons').click(function(){
