@@ -18,7 +18,7 @@
 <body>
     <div class="wrapper">
         <header class="header header--static">
-            <xo-sticky xo-direction="down" class="header__scroll">
+            <xo-sticky class="header__scroll">
                 <div class="header__nav">
                     <div class="header__logo">
                         <a href="">
@@ -73,39 +73,39 @@
                                 <xo-carousel-list>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-1.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-2.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-3.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-4.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-3.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                     <xo-carousel-slide class="product-info__item">
                                         <div class="carousel-item">
-                                            <img src="./src/image/product-4.png" alt="">
+                                            <img src="./src/image/img-detail.png" alt="">
                                         </div>
                                     </xo-carousel-slide>
                                 </xo-carousel-list>
                             </xo-carousel-inner>
                             <xo-carousel-thumbnail
                                 xo-rewind
-                                xo-per-view="5"
+                                xo-per-view="4"
                                 xo-per-move="1"
                                 class="mt-20"
                             >
@@ -198,19 +198,39 @@
                                 <span class="product-info__detail-sub">SELECT DEVICE</span>
                                 <div class="product-info__detail-option">
                                     <div class="product-info__detail-main">
-                                        <p class="product-info__detail-type product-info__detail-type--selected">Apple <img src="./src/image/Arrow-down.png" alt=""></p>
+                                        <xo-popover-trigger xo-name="pop">
+                                            <div class="product-info__detail-type">Apple <img src="./src/image/Arrow-down.png" alt=""></div>
+                                        </xo-popover-trigger>
+                                
+                                        <xo-popover xo-name="pop">
+                                            <div class="product-info__detail-name">
+                                                <span class="">Apple</span>
+                                                <span class="">Apple</span>
+                                                <span class="">Apple</span>
+                                            </div>
+                                        </xo-popover>
                                     </div>
                                     <div class="product-info__detail-main">
-                                        <p class="product-info__detail-type product-info__detail-type--selected">Apple <img src="./src/image/Arrow-down.png" alt=""></p>
+                                        <xo-popover-trigger xo-name="pop-2">
+                                            <div class="product-info__detail-type">Apple <img src="./src/image/Arrow-down.png" alt=""></div>
+                                        </xo-popover-trigger>
+                                
+                                        <xo-popover xo-name="pop-2">
+                                            <div class="product-info__detail-name">
+                                                <span class="">Apple</span>
+                                                <span class="">Apple</span>
+                                                <span class="">Apple</span>
+                                            </div>
+                                        </xo-popover>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-info__detail-color">
                                 <span class="product-info__detail-sub">SELECT DEVICE</span>
                                 <ul class="product-info__detail-list">
-                                    <li class="product-info__detail-item product-info__detail-item--selected"></li>
-                                    <li class="product-info__detail-item"></li>
-                                    <li class="product-info__detail-item"></li>
+                                    <li class="product-info__detail-item product-info__detail-item--selected" style="--color-1: #0F61FF"></li>
+                                    <li class="product-info__detail-item" style="--color-2: #C1C1C1"></li>
+                                    <li class="product-info__detail-item" style="--color-3: #D9B99B"></li>
                                 </ul>
                             </div>
                             <div class="product-info__detail-change">
@@ -245,28 +265,12 @@
 
                             <xo-collapse-provider xo-duration="300">
                                 <div class="product-info__detail-collapsible">
-                                    <xo-collapse-trigger xo-active class="product-info__detail-icons">
-                                        <h6>Main features</h6>
-                                        <i class="fa-solid fa-plus"></i>
-                                    </xo-collapse-trigger>
-                                    <xo-collapse xo-active class="product-info__detail-text">
-                                        <p>
-                                            The Bundle includes 1 box, 1 phone case, and 4 screen wipers or 2 screen protectors for iPhone 15 sizes.
-                                        </p>
-                                        <ul>
-                                            <li>Ultra-slim hybrid raised AirLite™ corners for all-round protection</li>
-                                            <li>Raised lens bezel to shield back camera</li>
-                                            <li>Flexible anti-yellowing Bayer TPU bumper for long-lasting clarity</li>
-                                            <li>Tough 3H scratch-resistant polycarbonate back</li>
-                                            <li>Reinforced raised corners to shield against direct face-down impact</li>
-                                            <li>Drop-tested to withstand up to 8 feet/2.5 meters</li>
-                                        </ul>
-                                    </xo-collapse>
-                                </div>
-                                <div class="product-info__detail-collapsible">
                                     <xo-collapse-trigger class="product-info__detail-icons">
                                         <h6>Main features</h6>
-                                        <i class="fa-solid fa-plus"></i>
+                                        <div class="product-info__detail-img">
+                                            <img src="./src/image/Plus-black.png" alt="">
+                                            <img src="./src/image/Dash.png" alt="">
+                                        </div>
                                     </xo-collapse-trigger>
                                     <xo-collapse class="product-info__detail-text">
                                         <p>
@@ -285,7 +289,32 @@
                                 <div class="product-info__detail-collapsible">
                                     <xo-collapse-trigger class="product-info__detail-icons">
                                         <h6>Main features</h6>
-                                        <i class="fa-solid fa-plus"></i>
+                                        <div class="product-info__detail-img">
+                                            <img src="./src/image/Plus-black.png" alt="">
+                                            <img src="./src/image/Dash.png" alt="">
+                                        </div>
+                                    </xo-collapse-trigger>
+                                    <xo-collapse class="product-info__detail-text">
+                                        <p>
+                                            The Bundle includes 1 box, 1 phone case, and 4 screen wipers or 2 screen protectors for iPhone 15 sizes.
+                                        </p>
+                                        <ul>
+                                            <li>Ultra-slim hybrid raised AirLite™ corners for all-round protection</li>
+                                            <li>Raised lens bezel to shield back camera</li>
+                                            <li>Flexible anti-yellowing Bayer TPU bumper for long-lasting clarity</li>
+                                            <li>Tough 3H scratch-resistant polycarbonate back</li>
+                                            <li>Reinforced raised corners to shield against direct face-down impact</li>
+                                            <li>Drop-tested to withstand up to 8 feet/2.5 meters</li>
+                                        </ul>
+                                    </xo-collapse>
+                                </div>
+                                <div class="product-info__detail-collapsible">
+                                    <xo-collapse-trigger class="product-info__detail-icons">
+                                        <h6>Main features</h6>
+                                        <div class="product-info__detail-img">
+                                            <img src="./src/image/Plus-black.png" alt="">
+                                            <img src="./src/image/Dash.png" alt="">
+                                        </div>
                                     </xo-collapse-trigger>
                                     <xo-collapse class="product-info__detail-text">
                                         <p>
@@ -307,26 +336,26 @@
             </xo-container>
         </section>
         <section class="st-cases">
-            <div class="container">
+            <xo-container>
                 <div class="st-cases__title">
-                    <h4>Extreme Cases MagSafe Compatible</h4>
+                    <h2>Extreme Cases MagSafe Compatible</h2>
                 </div>
                 <div class="st-cases__main">
                     <xo-grid>
                         <div style="--xs: 6; --sm: 6; --lg: 3">
-                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 0; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
-                                <a href="" class="product-card">
+                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 6; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
+                                <div class="product-card">
                                     <div class="product-card__icon">
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     </div>
-                                    <div class="product-card__img">
+                                    <a href="" class="product-card__img">
                                         <img src="./src/image/product-1.png" alt="">
                                         <div class="product-card__img-action">
                                             <img src="./src/image/product-2.png" alt="">
                                         </div>
-                                    </div>
+                                    </a>
                                     
                                     <div class="product-card__description">
                                         <h6>Hills</h6>
@@ -338,24 +367,23 @@
                                             <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                         </ul>
                                     </div>
-                                </a>
+                                </div>
                             </xo-animate>
-                            
                         </div>
                         <div style="--xs: 6; --sm: 6; --lg: 3">
-                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 1; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
-                                <a href="" class="product-card">
+                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 7; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
+                                <div class="product-card">
                                     <div class="product-card__icon">
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     </div>
-                                    <div class="product-card__img">
+                                    <a href="" class="product-card__img">
                                         <img src="./src/image/product-2.png" alt="">
                                         <div class="product-card__img-action">
                                             <img src="./src/image/product-3.png" alt="">
                                         </div>
-                                    </div>
+                                    </a>
                                     
                                     <div class="product-card__description">
                                         <h6>Hills</h6>
@@ -367,23 +395,23 @@
                                             <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                         </ul>
                                     </div>
-                                </a>
+                                </div>
                             </xo-animate>
                         </div>
                         <div style="--xs: 6; --sm: 6; --lg: 3">
-                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 2; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
-                                <a href="" class="product-card">
+                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 8; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
+                                <div class="product-card">
                                     <div class="product-card__icon">
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     </div>
-                                    <div class="product-card__img">
+                                    <a href="" class="product-card__img">
                                         <img src="./src/image/product-3.png" alt="">
                                         <div class="product-card__img-action">
                                             <img src="./src/image/product-4.png" alt="">
                                         </div>
-                                    </div>
+                                    </a>
                                     
                                     <div class="product-card__description">
                                         <h6>Hills</h6>
@@ -395,23 +423,23 @@
                                             <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                         </ul>
                                     </div>
-                                </a>
+                                </div>
                             </xo-animate>
                         </div>
                         <div style="--xs: 6; --sm: 6; --lg: 3">
-                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 3; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
-                                <a href="" class="product-card">
+                            <xo-animate xo-cascade="" xo-type="fade-up" style="opacity: 1; --xo-order: 9; --xo-strength: 1; --xo-constant: 75; --xo-duration: 500; --xo-easing: cubic-bezier(0, 0, 0.3, 1); animation: auto ease 0s 1 normal none running none;" xo-visible="">
+                                <div class="product-card">
                                     <div class="product-card__icon">
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     </div>
-                                    <div class="product-card__img">
-                                        <img src="./src/image/product-1.png" alt="">
+                                    <a href="" class="product-card__img">
+                                        <img src="./src/image/product-4.png" alt="">
                                         <div class="product-card__img-action">
-                                            <img src="./src/image/product-2.png" alt="">
+                                            <img src="./src/image/product-3.png" alt="">
                                         </div>
-                                    </div>
+                                    </a>
                                     
                                     <div class="product-card__description">
                                         <h6>Hills</h6>
@@ -423,13 +451,12 @@
                                             <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                         </ul>
                                     </div>
-                                </a>
+                                </div>
                             </xo-animate>
-                            
                         </div>
                     </xo-grid>
                 </div>
-            </div>
+            </xo-container>
         </section>
 
         <section class="intro">
@@ -444,10 +471,10 @@
                 </xo-parallax-scroll>
             </xo-parallax>
             <div class="intro__content">
-                <div class="container">
+                <xo-container>
                     <div class="intro__content-des">
                         <div class="intro__content-title">
-                            <h6>Introducing the Plasma XTE Case, blend of cutting-edge design and unwavering protection</h6>
+                            <h2>Introducing the Plasma XTE Case, blend of cutting-edge design and unwavering protection</h2>
                         </div>
                         <div class="intro__content-info">
                             <div class="row">
@@ -455,11 +482,11 @@
                                     <div class="intro__content-text">
                                         <div class="intro__content-box">
                                             <span>IP Protech Up To</span>
-                                            <h2>IP68</h2>
+                                            <h3>IP68</h3>
                                         </div>
                                         <div class="intro__content-box">
                                             <span>Drop Protechtion</span>
-                                            <h2>Air Tech</h2>
+                                            <h3>Air Tech</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -493,7 +520,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </xo-container>
             </div>
         </section>
         <section class="custom">
@@ -535,16 +562,16 @@
                                 </div>
                                 <div class="custom__nav">
                                     <xo-carousel-prev><button><img src="./src/image/Arrow-left.png" alt=""></button></xo-carousel-prev>
-                                        <xo-carousel-inner>
-                                            <xo-carousel-list>
+                                    <xo-carousel-inner>
+                                        <xo-carousel-list>
                                             <xo-carousel-slide><div class="carousel-item">MATERIAL</div></xo-carousel-slide>
                                             <xo-carousel-slide><div class="carousel-item">MATERIAL 2</div></xo-carousel-slide>
                                             <xo-carousel-slide><div class="carousel-item">MATERIAL 3</div></xo-carousel-slide>
-                                            </xo-carousel-list>
-                                        </xo-carousel-inner>
+                                        </xo-carousel-list>
+                                    </xo-carousel-inner>
                                     <xo-carousel-next><button><img src="./src/image/Arrow-right.png" alt=""></button></xo-carousel-next>
                                 </div>
-                                <xo-carousel-thumbnail style="margin-top: 20px;" class="custom__thumbnail"
+                                <xo-carousel-thumbnail class="custom__thumbnail"
                                     xo-rewind
                                     xo-per-view="5"
                                     xo-per-move="1"
@@ -582,7 +609,7 @@
         <section class="questions">
             <div class="container">
                 <div class="questions__title">
-                    <h4>Frequently Asked Questions</h4>
+                    <h2>Frequently Asked Questions</h2>
                 </div>
                 <div class="questions__main">
                     <xo-collapse-provider xo-duration="300">
@@ -643,125 +670,187 @@
         <section class="other-product">
             <xo-container>
                 <div class="other-product__title">
-                    <h4>You may also like</h4>
+                    <h2>You may also like</h2>
                     <a href="" class="other-product__title-button">Shop all</a>
                 </div>
-                <xo-grid>
-                    <div style="--xs: 6; --sm: 6; --lg: 3">
-                        <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
-                                <div class="product-card__icon">
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                <xo-carousel
+                    xo-per-view="4"
+                    xo-per-move="1"
+                    xo-breakpoints="{
+                        400: {
+                          perView: 2,
+                          perMove: 1,
+                        },
+                        768: {
+                            perView: 3,
+                            perMove: 1,
+                        },
+                        1000: {
+                          perView: 4,
+                          perMove: 1,
+                        },
+                      }"
+                >
+                    <xo-carousel-inner>
+                        <xo-carousel-list>
+                            <xo-carousel-slide>
+                                <div class="carousel-item">
+                                    <xo-animate xo-cascade="" xo-type="fade-up">
+                                        <div class="product-card">
+                                            <div class="product-card__icon">
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                            </div>
+                                            <a href="" class="product-card__img">
+                                                <img src="./src/image/product-1.png" alt="">
+                                                <div class="product-card__img-action">
+                                                    <img src="./src/image/product-2.png" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                            <div class="product-card__description">
+                                                <h6>Hills</h6>
+                                                <p class="product-card__description-price">$76</p>
+                                                <ul class="product-card__description-option">
+                                                    <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                                    <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                                    <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                                    <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </xo-animate>
                                 </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-1.png" alt="">
-                                    <div class="product-card__img-action">
-                                        <img src="./src/image/product-2.png" alt="">
-                                    </div>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide>
+                                <div class="carousel-item">
+                                    <xo-animate xo-cascade="" xo-type="fade-up">
+                                        <div class="product-card">
+                                            <div class="product-card__icon">
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                            </div>
+                                            <a href="" class="product-card__img">
+                                                <img src="./src/image/product-2.png" alt="">
+                                                <div class="product-card__img-action">
+                                                    <img src="./src/image/product-3.png" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                            <div class="product-card__description">
+                                                <h6>Hills</h6>
+                                                <p class="product-card__description-price">$76</p>
+                                                <ul class="product-card__description-option">
+                                                    <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                                    <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                                    <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                                    <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </xo-animate>
                                 </div>
-                                
-                                <div class="product-card__description">
-                                    <h6>Hills</h6>
-                                    <p class="product-card__description-price">$76</p>
-                                    <ul class="product-card__description-option">
-                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
-                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
-                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
-                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
-                                    </ul>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide>
+                                <div class="carousel-item">
+                                    <xo-animate xo-cascade="" xo-type="fade-up">
+                                        <div class="product-card">
+                                            <div class="product-card__icon">
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                            </div>
+                                            <a href="" class="product-card__img">
+                                                <img src="./src/image/product-3.png" alt="">
+                                                <div class="product-card__img-action">
+                                                    <img src="./src/image/product-4.png" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                            <div class="product-card__description">
+                                                <h6>Hills</h6>
+                                                <p class="product-card__description-price">$76</p>
+                                                <ul class="product-card__description-option">
+                                                    <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                                    <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                                    <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                                    <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </xo-animate>
                                 </div>
-                            </a>
-                        </xo-animate>
-                        
+                            </xo-carousel-slide>
+                            <xo-carousel-slide>
+                                <div class="carousel-item">
+                                    <xo-animate xo-cascade="" xo-type="fade-up">
+                                        <div class="product-card">
+                                            <div class="product-card__icon">
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                            </div>
+                                            <a href="" class="product-card__img">
+                                                <img src="./src/image/product-4.png" alt="">
+                                                <div class="product-card__img-action">
+                                                    <img src="./src/image/product-2.png" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                            <div class="product-card__description">
+                                                <h6>Hills</h6>
+                                                <p class="product-card__description-price">$76</p>
+                                                <ul class="product-card__description-option">
+                                                    <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                                    <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                                    <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                                    <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </xo-animate>
+                                </div>
+                            </xo-carousel-slide>
+                            <xo-carousel-slide>
+                                <div class="carousel-item">
+                                    <xo-animate xo-cascade="" xo-type="fade-up">
+                                        <div class="product-card">
+                                            <div class="product-card__icon">
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                                <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
+                                            </div>
+                                            <a href="" class="product-card__img">
+                                                <img src="./src/image/product-3.png" alt="">
+                                                <div class="product-card__img-action">
+                                                    <img src="./src/image/product-4.png" alt="">
+                                                </div>
+                                            </a>
+                                            
+                                            <div class="product-card__description">
+                                                <h6>Hills</h6>
+                                                <p class="product-card__description-price">$76</p>
+                                                <ul class="product-card__description-option">
+                                                    <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
+                                                    <li class="product-card__description-item" style="--color-2: #A393B5"></li>
+                                                    <li class="product-card__description-item" style="--color-3: #EC978C"></li>
+                                                    <li class="product-card__description-item" style="--color-4: #EC978C"></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </xo-animate>
+                                </div>
+                            </xo-carousel-slide>
+                        </xo-carousel-list>
+                    </xo-carousel-inner>
+
+                    <div class="other-product__pagination">
+                        <xo-carousel-pagination></xo-carousel-pagination>
                     </div>
-                    <div style="--xs: 6; --sm: 6; --lg: 3">
-                        <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
-                                <div class="product-card__icon">
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-2.png" alt="">
-                                    <div class="product-card__img-action">
-                                        <img src="./src/image/product-3.png" alt="">
-                                    </div>
-                                </div>
-                                
-                                <div class="product-card__description">
-                                    <h6>Hills</h6>
-                                    <p class="product-card__description-price">$76</p>
-                                    <ul class="product-card__description-option">
-                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
-                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
-                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
-                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </xo-animate>
-                    </div>
-                    <div style="--xs: 6; --sm: 6; --lg: 3">
-                        <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
-                                <div class="product-card__icon">
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-3.png" alt="">
-                                    <div class="product-card__img-action">
-                                        <img src="./src/image/product-4.png" alt="">
-                                    </div>
-                                </div>
-                                
-                                <div class="product-card__description">
-                                    <h6>Hills</h6>
-                                    <p class="product-card__description-price">$76</p>
-                                    <ul class="product-card__description-option">
-                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
-                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
-                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
-                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </xo-animate>
-                    </div>
-                    <div style="--xs: 6; --sm: 6; --lg: 3">
-                        <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
-                                <div class="product-card__icon">
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                    <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
-                                </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-1.png" alt="">
-                                    <div class="product-card__img-action">
-                                        <img src="./src/image/product-2.png" alt="">
-                                    </div>
-                                </div>
-                                
-                                <div class="product-card__description">
-                                    <h6>Hills</h6>
-                                    <p class="product-card__description-price">$76</p>
-                                    <ul class="product-card__description-option">
-                                        <li class="product-card__description-item product-card__description-item--active" style="--color-1: #C9BFAE"></li>
-                                        <li class="product-card__description-item" style="--color-2: #A393B5"></li>
-                                        <li class="product-card__description-item" style="--color-3: #EC978C"></li>
-                                        <li class="product-card__description-item" style="--color-4: #EC978C"></li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </xo-animate>
-                        
-                    </div>
-                </xo-grid>
+                    
+                </xo-carousel>
 
                 <!-- <div class="other-product__dots">
                     <span class="other-product__dots-item other-product__dots-item--active"></span>
@@ -784,10 +873,26 @@
                                     them and post
                                 </p>
                                 <ul class="footer-main__social">
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Facebook.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Pinterest.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/tiktok.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Instagram.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Facebook">
+                                            <img src="./src/image/Facebook.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Pinterest">
+                                            <img src="./src/image/Pinterest.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Tiktok">
+                                            <img src="./src/image/tiktok.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Instagram">
+                                            <img src="./src/image/Instagram.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
                                 </ul>
                             </xo-animate>
                         </div>

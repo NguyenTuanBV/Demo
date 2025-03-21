@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <xo-sticky xo-direction="down" class="header__scroll">
+            <xo-sticky class="header__scroll">
                 <div class="header__nav">
                     <div class="header__logo">
                         <a href="">
@@ -57,12 +57,22 @@
                 </div>
             </xo-sticky>
         </header>
-        <section class="banner">
-            <img src="./src/image/bg-shop.png" alt="">
+        <section class="banner banner--shop" >
+            <xo-parallax>
+                <xo-parallax-scroll
+                    xo-keyframes="{
+                        '0%': {backgroundPositionY: '200px'},
+                        '100%': {backgroundPositionY: '-200px'}
+                    }"
+                    style="background-image: url(./src/image/bg-shop.png); width: 100%; height: 100%; background-repeat: no-repeat; background-position: center;"
+                >
+                </xo-parallax-scroll>
+            </xo-parallax>
+            <!-- <img src="./src/image/banner.png" alt=""> -->
             <div class="banner__product">
-                <div class="container">
+                <xo-container>
                     <h1>Shop all</h1>
-                </div>
+                </xo-container>
             </div>
         </section>
 
@@ -101,74 +111,88 @@
                     <xo-carousel-inner>
                         <xo-carousel-list>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list category-slide__list--selected">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-2.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list category-slide__list--selected">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-1.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-1.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-2.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-3.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-3.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-4.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-4.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-5.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-5.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-6.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-6.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                             <xo-carousel-slide class="category-slide__item">
-                                <a href="" class="category-slide__list">
-                                    <div class="category-slide__img">
-                                        <img src="./src/image/category-2.png" alt="">
-                                    </div>
-                                    <div class="category-slide__name">
-                                        <span>Case Samsung</span>
-                                    </div>
-                                </a>
+                                <xo-animate xo-cascade xo-type="fade-up">
+                                    <a href="" class="category-slide__list">
+                                        <div class="category-slide__img">
+                                            <img src="./src/image/category-2.png" alt="">
+                                        </div>
+                                        <div class="category-slide__name">
+                                            <span>Case Samsung</span>
+                                        </div>
+                                    </a>
+                                </xo-animate>
                             </xo-carousel-slide>
                         </xo-carousel-list>
                     </xo-carousel-inner>
@@ -183,95 +207,183 @@
                     <xo-carousel-pagination></xo-carousel-pagination>
                     
                 </xo-carousel>
-
-                <div class="category-slide owl-carousel owl-theme">
-                    <a href="" class="category-slide__list category-slide__list--selected">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-1.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Iphone</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-2.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Samsung</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-3.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Xiaomi</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-4.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Ipad</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-5.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Apple Watch</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-6.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case AirPods</span>
-                        </div>
-                    </a>
-                    <a href="" class="category-slide__list">
-                        <div class="category-slide__img">
-                            <img src="./src/image/category-2.png" alt="">
-                        </div>
-                        <div class="category-slide__name">
-                            <span>Case Samsung</span>
-                        </div>
-                    </a>
-                </div>
             </xo-container>
         </section>
         <section class="product-main">
-            <div class="container">
+            <xo-container>
                 <div class="product-main__heading">
-                    <div class="product-main__filter">
-                        <img src="./src/image/filter.png" alt=""> <span>Show filter</span>
-                    </div>
+                    <xo-modal-trigger xo-name="sidebar-1">
+                        <div class="product-main__heading-filter">
+                            <img src="./src/image/filter.png" alt=""> <span>Show filter</span>
+                        </div>
+                    </xo-modal-trigger>
+                    <xo-modal xo-portal xo-name="sidebar-1" xo-animate="slide-left" xo-duration="300" xo-placement="top-right">
+                        <div class="product-main__modal">
+                            <div class="product-main__title">
+                                <h4>Filter & sort</h4>
+                                <xo-modal-trigger class="product-main__modal-close">
+                                    <span><img src="./src/image/close.png" alt=""></span>
+                                </xo-modal-trigger>
+                            </div>
+                            <div class="product-main__filter">
+                                <div class="product-main__filter-list">
+                                    <xo-collapse-provider xo-duration="300">
+                                        <xo-collapse-trigger xo-active>
+                                            <div class="product-main__filter-title">
+                                                <h5>Availability</h5>
+                                                <span><img src="./src/image/down.png" alt=""></span>
+                                            </div>
+                                        </xo-collapse-trigger>
+                                            <xo-collapse xo-active>
+                                                <div class="product-main__filter-item">
+                                                    <div class="product-main__filter-content">
+                                                        <label>
+                                                            <input type="checkbox"> <span></span> 
+                                                            In stock <i>(25)</i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="product-main__filter-item">
+                                                    <div class="product-main__filter-content">
+                                                        <label>
+                                                            <input type="checkbox"> <span></span> 
+                                                            Out of stock <i>(25)</i>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </xo-collapse>
+                                    </xo-collapse-provider>
+                                </div>
+                                <div class="product-main__filter-list">
+                                    <xo-collapse-provider xo-duration="300">
+                                        <xo-collapse-trigger>
+                                            <div class="product-main__filter-title">
+                                                <h5>Category</h5>
+                                                <span><img src="./src/image/down.png" alt=""></span>
+                                            </div>
+                                        </xo-collapse-trigger>
+                                        <xo-collapse>
+                                            <div class="product-main__filter-item">
+                                                <div class="product-main__filter-content">
+                                                    <label>
+                                                        <input type="checkbox"> <span></span> 
+                                                        Black <i>(25)</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="product-main__filter-item">
+                                                <div class="product-main__filter-content">
+                                                    <label>
+                                                        <input type="checkbox"> <span></span> 
+                                                        Cream Blue  <i>(25)</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="product-main__filter-item">
+                                                <div class="product-main__filter-content">
+                                                    <label>
+                                                        <input type="checkbox"> <span></span> 
+                                                        Grape <i>(25)</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="product-main__filter-item">
+                                                <div class="product-main__filter-content">
+                                                    <label>
+                                                        <input type="checkbox"> <span></span> 
+                                                        Mustard  <i>(25)</i>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </xo-collapse>
+                                    </xo-collapse-provider>
+                                </div>
+                                <div class="product-main__filter-list">
+                                    <xo-collapse-provider xo-duration="300">
+                                        <xo-collapse-trigger>
+                                            <div class="product-main__filter-title">
+                                                <h5>Price</h5>
+                                                <span><img src="./src/image/down.png" alt=""></span>
+                                            </div>
+                                        </xo-collapse-trigger>
+                                        <xo-collapse>
+                                            <div class="product-main__filter-price">
+                                                <xo-range-price xo-component-name="range-price" xo-money-format="${ money }" xo-type="min"></xo-range-price>
+                                                <xo-range-price xo-component-name="range-price" xo-money-format="${ money }" xo-type="max"></xo-range-price>
+                                            </div>
+                                            <div class="product-main__filter-range">
+                                                <xo-range
+                                                    xo-component-name="range-price"
+                                                    xo-name="['min', 'max']"
+                                                    xo-min="0"
+                                                    xo-max="200"
+                                                    xo-step="1"
+                                                    xo-value="[0, 200]"
+                                                >
+                                                </xo-range>
+                                            </div>
+                                            
+                                            <!-- <input type="text" xo-component-name="range-price" xo-type="min">
+                                            <input type="text" xo-component-name="range-price" xo-type="max"> -->
+                                        </xo-collapse>
+                                    </xo-collapse-provider>
+                                </div>
+                                <div class="product-main__filter-list">
+                                    <div class="product-main__filter-button">
+                                        <button type="button">Clear all</button>
+                                        <button type="button" class="button button--link">Apply filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </xo-modal>
                     <div class="product-main__sort">
                         <span>SORT BY:</span>
-                        <div class="product-main__sort-selected">
-                            <p>Recently Added <img src="./src/image/Arrow-down.png" alt=""></p>
+                        <div class="product-main__popover">
+                            <xo-popover-trigger xo-name="pop" class="product-main__sort-selected">
+                                <p>Recently Added <img src="./src/image/Arrow-down.png" alt=""></p>
+                            </xo-popover-trigger>
+                            <xo-popover xo-name="pop">
+                                <div class="product-main__list">
+                                    <div class="product-main__item">
+                                        <label class="product-main__field">
+                                            <input type="checkbox" name="" checked> Featured
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="product-main__item">
+                                        <label class="product-main__field">
+                                            <input type="checkbox" name=""> Featured
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                    <div class="product-main__item">
+                                        <label class="product-main__field">
+                                            <input type="checkbox" name=""> Featured
+                                            <span></span>
+                                        </label>
+                                        
+                                    </div>
+                                </div>
+                            </xo-popover>
                         </div>
                     </div>
                 </div>
                 <xo-grid>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-1.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-2.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -283,24 +395,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
-                        
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-2.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-3.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -312,23 +423,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-3.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-4.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -340,23 +451,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-1.png" alt="">
+                                <a href="" class="product-card__img">
+                                    <img src="./src/image/product-4.png" alt="">
                                     <div class="product-card__img-action">
-                                        <img src="./src/image/product-2.png" alt="">
+                                        <img src="./src/image/product-3.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -368,9 +479,8 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
-                        
                     </div>
                 </xo-grid>
                 <div class="product-main__pagination">
@@ -387,12 +497,12 @@
                         <img src="./src/image/Arrow-right.png" alt="">
                     </button>
                 </div>
-            </div>
+            </xo-container>
         </section>
         <section class="services">
             <xo-container>
-                <div class="row">
-                    <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
+                <xo-grid>
+                    <div style="--xs: 12; --sm: 6; --lg: 4">
                         <xo-animate xo-cascade xo-type="fade-up">
                             <div class="services__item">
                                 <div class="services__item-img">
@@ -407,7 +517,7 @@
                            </div>
                         </xo-animate>
                     </div>
-                    <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
+                    <div style="--xs: 12; --sm: 6; --lg: 4">
                         <xo-animate xo-cascade xo-type="fade-up">
                             <div class="services__item">
                                 <div class="services__item-img">
@@ -422,7 +532,7 @@
                            </div>
                         </xo-animate>
                     </div>
-                    <div class="col" style="--col-lg: 4; --col-md: 6; --col-md: 6">
+                    <div style="--xs: 12; --sm: 6; --lg: 4">
                         <xo-animate xo-cascade xo-type="fade-up">
                             <div class="services__item">
                                 <div class="services__item-img">
@@ -437,7 +547,7 @@
                            </div>
                         </xo-animate>
                     </div>
-                </div>
+                </xo-grid>
             </xo-container>
         </section>
         <footer>
@@ -452,10 +562,26 @@
                                     them and post
                                 </p>
                                 <ul class="footer-main__social">
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Facebook.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Pinterest.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/tiktok.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Instagram.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Facebook">
+                                            <img src="./src/image/Facebook.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Pinterest">
+                                            <img src="./src/image/Pinterest.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Tiktok">
+                                            <img src="./src/image/tiktok.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Instagram">
+                                            <img src="./src/image/Instagram.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
                                 </ul>
                             </xo-animate>
                         </div>

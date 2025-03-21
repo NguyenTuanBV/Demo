@@ -61,3 +61,42 @@
 // })
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    function changeScreen(){
+        const elements = document.querySelectorAll(".review__content-img");
+        const bodyWidth = document.body.offsetWidth;
+        const widthPaddingLarge = (bodyWidth - 1632)/2;
+        const widthPaddingSmall = 14;
+        let widthPadding = bodyWidth > 1600 ? widthPaddingLarge : widthPaddingSmall;
+        console.log("bodyWidth:", bodyWidth, "=> widthPadding:", widthPadding);
+        elements.forEach((element, index) => {
+            const content = element.querySelector(".review__content-des"); 
+    
+            const image = element.querySelector("img");
+            const imageWidth = image.offsetWidth; 
+                
+            console.log(`width của ảnh: ${index + 1}: ${imageWidth}px`);
+    
+            const offsetLeft = element.offsetLeft + imageWidth + widthPadding;
+            // const offsetRight = bodyWidth - offsetLeft - imageWidth;
+            // console.log("offsetRight: " + offsetRight);
+            const contentWidth = content.offsetWidth;
+            const overWidth = offsetLeft + contentWidth - bodyWidth;
+    
+            console.log(`Phần tử thứ ${index + 1}: widthPadding + offsetLeft + imageWidth = ${offsetLeft}px`);
+    
+            if (offsetLeft + contentWidth >= bodyWidth) {
+                element.classList.add("active");
+                element.style.setProperty("--overWidth", `${overWidth + 30}px`);
+                console.log(`Phần tử thứ ${index + 1}: ${offsetLeft} + ${contentWidth}px = ${offsetLeft + contentWidth + "px"} vượt quá body (${bodyWidth}px) là ${overWidth}px`);
+            } else {
+                console.log(`Phần tử thứ ${index + 1}: ${offsetLeft} + ${contentWidth}px = ${offsetLeft + contentWidth + "px"} nằm trong body (${bodyWidth}px)`);
+            }
+        });
+    }
+    
+
+    changeScreen();
+    window.addEventListener("resize", changeScreen);
+});

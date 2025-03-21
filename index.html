@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <xo-sticky xo-direction="down" class="header__scroll">
+            <xo-sticky class="header__scroll">
                 <div class="header__nav">
                     <div class="header__logo">
                         <a href="">
@@ -60,7 +60,18 @@
         
         
         <section class="banner">
-            <img src="./src/image/banner-home.png" alt="">
+            <xo-parallax>
+                <xo-parallax-scroll
+                    xo-keyframes="{
+                        '0%': {backgroundPositionY: '200px'},
+                        '100%': {backgroundPositionY: '-200px'}
+                    }"
+                    style="background-image: url(./src/image/banner-home.png);"
+                    class="banner__img"
+                >
+
+                </xo-parallax-scroll>
+            </xo-parallax>
             <h1 class="banner__title">
                 Protection with style
             </h1>
@@ -70,24 +81,24 @@
             <xo-container>
                 <div class="best-sellers__title">
                     <xo-animate xo-cascade xo-type="fade-up">
-                        <h5>Best Sellers</h5>
+                        <h2>Best Sellers</h2>
                     </xo-animate>
                 </div>
                 <xo-grid>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-1.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-2.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -99,24 +110,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
-                        
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-2.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-3.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -128,23 +138,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
+                                <a href="" class="product-card__img">
                                     <img src="./src/image/product-3.png" alt="">
                                     <div class="product-card__img-action">
                                         <img src="./src/image/product-4.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -156,23 +166,23 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
                     </div>
                     <div style="--xs: 6; --sm: 6; --lg: 3">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <a href="" class="product-card">
+                            <div class="product-card">
                                 <div class="product-card__icon">
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                     <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                 </div>
-                                <div class="product-card__img">
-                                    <img src="./src/image/product-1.png" alt="">
+                                <a href="" class="product-card__img">
+                                    <img src="./src/image/product-4.png" alt="">
                                     <div class="product-card__img-action">
-                                        <img src="./src/image/product-2.png" alt="">
+                                        <img src="./src/image/product-3.png" alt="">
                                     </div>
-                                </div>
+                                </a>
                                 
                                 <div class="product-card__description">
                                     <h6>Hills</h6>
@@ -184,9 +194,8 @@
                                         <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                     </ul>
                                 </div>
-                            </a>
+                            </div>
                         </xo-animate>
-                        
                     </div>
                 </xo-grid>
                 <div class="best-sellers__bg">
@@ -205,7 +214,7 @@
             <xo-container>
                 <div class="st-cases__title">
                     <xo-animate xo-cascade xo-type="fade-up">
-                        <h4>Extreme Cases MagSafe Compatible</h4>
+                        <h2>Extreme Cases MagSafe Compatible</h2>
                     </xo-animate>
                 </div>
                 <div class="st-cases__main">
@@ -233,12 +242,12 @@
                             <xo-carousel-list>
                                 <xo-carousel-slide>
                                     <div class="carousel-item">
-                                        <xo-animate xo-cascade xo-type="fade-up">
+                                        <xo-animate xo-cascade xo-type="fade-up" class="st-cases__carousel">
                                             <a href="" class="st-cases__item">
                                                 <div class="st-cases__item-action">
                                                     <img src="./src/image/case-2.png" alt="">
                                                 </div>
-                                                <img src="./src/image/case-2.png" alt="">
+                                                <img src="./src/image/case-1.png" alt="">
                                                 <div class="st-cases__item-title">
                                                     <strong class="st-cases__item-number">01</strong>
                                                     <div class="st-cases__item-des st-cases__item-des--first">Essentials by CASETiFY™ The Beauty of Simplicity</div>
@@ -249,7 +258,7 @@
                                 </xo-carousel-slide>
                                 <xo-carousel-slide>
                                     <div class="carousel-item">
-                                        <xo-animate xo-cascade xo-type="fade-up">
+                                        <xo-animate xo-cascade xo-type="fade-up" class="st-cases__carousel">
                                             <a href="" class="st-cases__item">
                                                 <div class="st-cases__item-action">
                                                     <img src="./src/image/case-2.png" alt="">
@@ -265,12 +274,12 @@
                                 </xo-carousel-slide>
                                 <xo-carousel-slide>
                                     <div class="carousel-item">
-                                        <xo-animate xo-cascade xo-type="fade-up">
+                                        <xo-animate xo-cascade xo-type="fade-up" class="st-cases__carousel">
                                             <a href="" class="st-cases__item">
                                                 <div class="st-cases__item-action">
                                                     <img src="./src/image/case-2.png" alt="">
                                                 </div>
-                                                <img src="./src/image/case-2.png" alt="">
+                                                <img src="./src/image/case-3.png" alt="">
                                                 <div class="st-cases__item-title">
                                                     <strong class="st-cases__item-number">03</strong>
                                                     <div class="st-cases__item-des st-cases__item-des--first">Spice up your mirror selfies with a little Y2K</div>
@@ -346,7 +355,7 @@
                 <xo-container>
                     <div class="st-image__content-des">
                         <xo-animate xo-cascade xo-type="fade-up">
-                            <h3>Spice up your mirror selfies with a little  phone</h3>
+                            <h2>Spice up your mirror selfies with a little  phone</h2>
                         </xo-animate>
                     </div>
                 </xo-container>
@@ -365,9 +374,12 @@
                             </div>
                             <div class="st-image__bottom-price">
                                 <p>$20.00 <strong>$58.00</strong></p>
-                                <div class="st-image__bottom-button">
-                                    <button type="button" class="button1 button1--active"><img src="./src/image/Plus.png" alt=""></button>
-                                </div>
+                                <xo-tooltip xo-title="Add to cart">
+                                    <div class="st-image__bottom-button">
+                                        <button type="button" class="button1 button1--active"><img src="./src/image/Plus.png" alt=""></button>
+                                    </div>
+                                </xo-tooltip>
+                                
                             </div>
                         </div>
                     </div>
@@ -418,7 +430,7 @@
                             <div class="st-compatible__img">
                                 <div class="st-compatible__title">
                                     <xo-animate xo-cascade xo-type="fade-up">
-                                        <h5>Extreme Case Compatible</h5>
+                                        <h2>Extreme Case Compatible</h2>
                                     </xo-animate>
                                 </div>
                                 <img src="./src/image/img-large.png" alt="">
@@ -429,18 +441,18 @@
                         <xo-grid>
                             <div style="--xs: 6; --sm: 6; --lg: 6">
                                 <xo-animate xo-cascade xo-type="fade-up">
-                                    <a href="" class="product-card">
+                                    <div class="product-card">
                                         <div class="product-card__icon">
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         </div>
-                                        <div class="product-card__img">
+                                        <a href="" class="product-card__img">
                                             <img src="./src/image/product-1.png" alt="">
                                             <div class="product-card__img-action">
                                                 <img src="./src/image/product-2.png" alt="">
                                             </div>
-                                        </div>
+                                        </a>
                                         
                                         <div class="product-card__description">
                                             <h6>Hills</h6>
@@ -452,24 +464,23 @@
                                                 <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                             </ul>
                                         </div>
-                                    </a>
-
+                                    </div>
                                 </xo-animate>
                             </div>
                             <div style="--xs: 6; --sm: 6; --lg: 6">
                                 <xo-animate xo-cascade xo-type="fade-up">
-                                    <a href="" class="product-card">
+                                    <div class="product-card">
                                         <div class="product-card__icon">
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         </div>
-                                        <div class="product-card__img">
+                                        <a href="" class="product-card__img">
                                             <img src="./src/image/product-2.png" alt="">
                                             <div class="product-card__img-action">
                                                 <img src="./src/image/product-3.png" alt="">
                                             </div>
-                                        </div>
+                                        </a>
                                         
                                         <div class="product-card__description">
                                             <h6>Hills</h6>
@@ -481,24 +492,23 @@
                                                 <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                             </ul>
                                         </div>
-                                    </a>
-                                    
+                                    </div>
                                 </xo-animate>
                             </div>
                             <div style="--xs: 6; --sm: 6; --lg: 6">
                                 <xo-animate xo-cascade xo-type="fade-up">
-                                    <a href="" class="product-card">
+                                    <div class="product-card">
                                         <div class="product-card__icon">
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         </div>
-                                        <div class="product-card__img">
+                                        <a href="" class="product-card__img">
                                             <img src="./src/image/product-3.png" alt="">
                                             <div class="product-card__img-action">
                                                 <img src="./src/image/product-4.png" alt="">
                                             </div>
-                                        </div>
+                                        </a>
                                         
                                         <div class="product-card__description">
                                             <h6>Hills</h6>
@@ -510,24 +520,23 @@
                                                 <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                             </ul>
                                         </div>
-                                    </a>
-                                    
+                                    </div>
                                 </xo-animate>
                             </div>
                             <div style="--xs: 6; --sm: 6; --lg: 6">
                                 <xo-animate xo-cascade xo-type="fade-up">
-                                    <a href="" class="product-card">
+                                    <div class="product-card">
                                         <div class="product-card__icon">
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                             <span class="product-card__icon-item"><i class="fa-solid fa-heart"></i></span>
                                         </div>
-                                        <div class="product-card__img">
+                                        <a href="" class="product-card__img">
                                             <img src="./src/image/product-1.png" alt="">
                                             <div class="product-card__img-action">
                                                 <img src="./src/image/product-2.png" alt="">
                                             </div>
-                                        </div>
+                                        </a>
                                         
                                         <div class="product-card__description">
                                             <h6>Hills</h6>
@@ -539,8 +548,7 @@
                                                 <li class="product-card__description-item" style="--color-4: #EC978C"></li>
                                             </ul>
                                         </div>
-                                    </a>
-                                    
+                                    </div>
                                 </xo-animate>
                             </div>
                         </xo-grid>
@@ -552,94 +560,224 @@
         <section class="review">
             <xo-container>
                 <div class="review__title">
-                    <h5>Customers say about us</h5>
+                    <h2>Customers say about us</h2>
                 </div>
-                <div class="review__content">
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--1">
-                        <img src="./src/image/customer-1.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                <xo-parallax>
+                    <div class="review__content">
+                        <div class="review__content-img review__content-img--1">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-1.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--2">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-2.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--3">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-3.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--4">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-4.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--5">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-5.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--6">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-6.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
+                        <div class="review__content-img review__content-img--7">
+                            <xo-parallax-scroll
+                                xo-keyframes="{
+                                    '0%': { x: -20, y: 0 },
+                                    '100%': { x: -10, y: 50 }
+                                }"
+                            >
+                                <xo-parallax-hover>
+                                    <div class="review__content-overlay"></div>
+                                    <img src="./src/image/customer-7.png" class="review__content-main" alt="">
+                                    <div class="review__content-des">
+                                        <p>
+                                            “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                            from them and post them as image.”
+                                        </p>
+                                        <span>Johny Angelo</span>
+                                    </div>
+                                </xo-parallax-hover>
+                            </xo-parallax-scroll>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--2">
-                        <img src="./src/image/customer-2.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                </xo-parallax>
+                <!-- <div class="review__content">
+                    <div class="review__content-img review__content-img--1">
+                        <img src="./src/image/customer-1.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--3">
-                        <img src="./src/image/customer-3.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                    <div class="review__content-img review__content-img--2">
+                        <img src="./src/image/customer-2.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--4">
-                        <img src="./src/image/customer-4.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                    <div class="review__content-img review__content-img--3">
+                        <img src="./src/image/customer-3.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--5">
-                        <img src="./src/image/customer-5.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                    <div class="review__content-img review__content-img--4">
+                        <img src="./src/image/customer-4.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--6">
-                        <img src="./src/image/customer-6.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                    <div class="review__content-img review__content-img--5">
+                        <img src="./src/image/customer-5.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                    <div is="xo-cursor" xo-mobile-disabled="true" xo-name="review__content-img" class="review__content-img review__content-img--7">
-                        <img src="./src/image/customer-7.png" alt="">
-                        <xo-cursor-item xo-mobile-disabled="true" xo-name="review__content-img" class="img-1">
-                            <div class="review__content-des">
-                                <p>
-                                    “This means that once you use different template designs for actual testimonial website widgets, you can make images
-                                    from them and post them as image.”
-                                </p>
-                                <span>Johny Angelo</span>
-                            </div>
-                        </xo-cursor-item>
+                    <div class="review__content-img review__content-img--6">
+                        <img src="./src/image/customer-6.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
                     </div>
-                </div>
+                    <div class="review__content-img review__content-img--7">
+                        <img src="./src/image/customer-7.png" class="review__content-main" alt="">
+                        <div class="review__content-des">
+                            <p>
+                                “This means that once you use different template designs for actual testimonial website widgets, you can make images
+                                from them and post them as image.”
+                            </p>
+                            <span>Johny Angelo</span>
+                        </div>
+                    </div>
+                </div> -->
             </xo-container>
         </section>
 
@@ -650,7 +788,7 @@
                         <xo-animate xo-cascade xo-type="fade-up">
                             <a href="" class="collection__card">
                                 <div class="collection__card-title">
-                                    <h6>Super Protect</h6>
+                                    <h4>Super Protect</h4>
                                     <div class="collection__card-link button button--link">Shop all</div>
                                 </div>
                                 <div class="collection__card-img">
@@ -663,7 +801,7 @@
                         <xo-animate xo-cascade xo-type="fade-up">
                             <a href="" class="collection__card">
                                 <div class="collection__card-title">
-                                    <h6>Super Protect</h6>
+                                    <h4>Super Protect</h4>
                                     <div class="collection__card-link button button--link">Shop all</div>
                                 </div>
                                 <div class="collection__card-img">
@@ -676,7 +814,7 @@
                         <xo-animate xo-cascade xo-type="fade-up">
                             <a href="" class="collection__card">
                                 <div class="collection__card-title">
-                                    <h6>Super Protect</h6>
+                                    <h4>Super Protect</h4>
                                     <div class="collection__card-link button button--link">Shop all</div>
                                 </div>
                                 <div class="collection__card-img">
@@ -701,10 +839,26 @@
                                     them and post
                                 </p>
                                 <ul class="footer-main__social">
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Facebook.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Pinterest.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/tiktok.png" alt=""></a></li>
-                                    <li class="footer-main__social-item"><a href=""><img src="./src/image/Instagram.png" alt=""></a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Facebook">
+                                            <img src="./src/image/Facebook.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Pinterest">
+                                            <img src="./src/image/Pinterest.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Tiktok">
+                                            <img src="./src/image/tiktok.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
+                                    <li class="footer-main__social-item"><a href="">
+                                        <xo-tooltip xo-title="Instagram">
+                                            <img src="./src/image/Instagram.png" alt="">
+                                        </xo-tooltip>
+                                    </a></li>
                                 </ul>
                             </xo-animate>
                         </div>
